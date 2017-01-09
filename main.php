@@ -2,16 +2,14 @@
  $sort_value="Id ASC";
   //  $_SESSION['sorting'] = " DESC ";
   //   $_SESSION['sorting_field'] = " Id ";
+
+    //Users in the TIps program
+    $users=get_users();
     //results to show in the page
     $max_result_per_page=15;
     //The total pages 
     $total_pages=get_total_records($max_result_per_page);
-    //Users in the TIps program
-    $users=array("Μπατζογιάννη Θεανώ","Αλεξοπούλου Στέλλα","Ταμτάκου Σοφία","Κοντός Κρυστάλλης","Ζαχούδης Πάρης","Σπυρίδης Ιορδάνης","Σωτηράκου Αναστασία","Κωνσταντίνου Χρήστος","Κωνσταντίνου Δέσποινα",
-         "Παυλίδου Ελισάβετ","Σαββαΐδου Ισμήνη-Αναστασία","Κουντουρά Κρυσταλλία","Κεσκιλίδου Κωνσταντία","Κούκα Δούκισσα","Πλούγαρλης Αναστάσιος","Μανάκος Αντώνιος","Αυγέρος Χρήστος","Μενούτη Σαββίνη","Χαλτογιαννίδου Ελισάβετ","Γεωργάκη Δήμητρα","Ευθυμιάδης Στέφανος");
    
-    $usernames=array("mpth","alst","taso","kokr","zari","spio","soan","kwch","kode","keko");
-    
     $states =array('Pending','Ολες','Finished','Cancelled','Paused');
    
     $users_mis8wtoi= array ('alst','ayxr','dedi','zari','kokr','kode','kwch','mpth','paai','spio','spni','stor','soan','taso','toma');
@@ -22,7 +20,7 @@
      $length_dep= count($departments);
     //Person for ENtolh APO
      $persons_to_give_orders=array("Άνθιμος","Βασιλική");
-   
+     
   
     $pending='';  $cancelled=''; $finished=''; $delayed_task=0; $task_ending_today=0;
     
@@ -132,7 +130,21 @@
         return $type;
     }
     
-    
+ 
+ 
+    function get_users(){   
+           $users= array();
+        $db1 = mysqli_connect('localhost','root','1122','jobs');
+        mysqli_set_charset($db1, "utf8");
+        $users_test_sql="SELECT fullname FROM users;";
+        $result_test=mysqli_query($db1, $users_test_sql);
+        $i=0;
+        while($row_test = mysqli_fetch_array($result_test)){
+            if ($row_test['fullname'] != 'Κουτάλου Βασιλική' && $row_test['fullname']!= 'Σπυρίδης Άνθιμος')
+                $users[$i++]=$row_test['fullname']; 
+        }
+        return $users;
+    }
     
     //Επιστρεφει το μεγαλυτερο Id που υπαρχει στην βαση ωστε το καινοργιο να ειναι +1
     function get_last_id(){
@@ -189,24 +201,24 @@
  
     //Παιρνει σαν εισοδο το username του χρηστη και επιστρεφει το ονοματεπωνυμο του στην επικεφαλιδα της σελιδας
     function get_name($user_check){       
-         echo  "<h2 class='name' >".get_name_from_username($user_check)."</h2>"; 
+        echo  "<h2 class='name' >".get_name_from_username($user_check)."</h2>"; 
     }
   
     //Παιρνει εισοδο τον αριθμο απο tasks που θελουμε να προβαλονται ανα σελιδα και επιστρεφει τον αριθμο σελιδων που θα υπαρχουν
     function calculate_total_records($results_per_page){       
-         $db = mysqli_connect('localhost','root','1122','jobs');
-         $sql = "SELECT COUNT(Id) AS total FROM tasks" ;
-        
-         $result = mysqli_query($db,$sql); 
-         $row = $result->fetch_assoc();
-         $total_pages = ceil($row["total"] / $results_per_page);
-        
-         return $total_pages;
+        $db = mysqli_connect('localhost','root','1122','jobs');
+        $sql = "SELECT COUNT(Id) AS total FROM tasks" ;
+
+        $result = mysqli_query($db,$sql); 
+        $row = $result->fetch_assoc();
+        $total_pages = ceil($row["total"] / $results_per_page);
+
+        return $total_pages;
      }    
   
     //Παιρνει εισοδο το username και αλλαζει το φιλτρο αναζητησης "Filter by User" αυτοματα για τον καθε χρηστη
     function change_auto_filter($user_check){
-         echo " <script>change('".  get_name_from_username($user_check)."')</script>";
+        echo " <script>change('".  get_name_from_username($user_check)."')</script>";
     }
     
     //Επιστρεφει το τμημα στο οποιο βρισκεται καθε χρηστης
@@ -221,56 +233,12 @@
     
     //Παιρνοντας εισοδο το username επιστρεφει το ονοματεπωνυμα του χρηστη
     function get_name_from_username($user_check){
-        
-    //    $key=  array_search($user_check, $usernames);
-      //  $name= $users[$key];
-         if ($user_check=="mpth")
-          $name='Μπατζογιάννη Θεανώ';
-        else if ($user_check=="alst")
-          $name='Αλεξοπούλου Στέλλα';
-        else if ($user_check=="taso")
-          $name='Ταμτάκου Σοφία';
-        else if ($user_check=="kokr")
-          $name='Κοντός Κρυστάλλης';
-        else if ($user_check=="zari")
-          $name='Ζαχούδης Πάρης';
-        else if ($user_check=="spio")
-          $name='Σπυρίδης Ιορδάνης';
-        else if ($user_check=="soan")
-          $name='Σωτηράκου Αναστασία';
-        else if ($user_check=="kwch")
-          $name='Κωνσταντίνου Χρήστος';
-        else if ($user_check=="kode")
-          $name='Κωνσταντίνου Δέσποινα';
-        else if ($user_check=="span")
-          $name='Σπυρίδης Άνθιμος';
-        else if ($user_check == "kova")
-           $name='Κουτάλου Βασιλική';
-        else if ($user_check == "pael")
-           $name='Παυλίδου Ελισάβετ';   
-        else if ($user_check == "sais")
-           $name='Σαββαΐδου Ισμήνη-Αναστασία';   
-        else if ($user_check == "kukr")
-           $name='Κουντουρά Κρυσταλλία';   
-        else if ($user_check == "keko")
-           $name='Κεσκιλίδου Κωνσταντία';   
-        else if ($user_check == "kodo")
-           $name='Κούκα Δούκισσα';   
-        else if ($user_check == "plan")
-           $name='Πλούγαρλης Αναστάσιος';   
-        else if ($user_check == "maan")
-           $name='Μανάκος Αντώνιος';
-        else if ($user_check == "ayxr")
-           $name='Αυγέρος Χρήστος';
-        else if ($user_check == "hael")
-           $name='Χαλτογιαννίδου Ελισάβετ';
-        else if ($user_check == "mesa")
-           $name='Μενούτη Σαββίνη';
-        else if ($user_check == "gedi")
-           $name='Γεωργάκη Δήμητρα';
-       else if ($user_check == "eust")
-           $name='Ευθυμιάδης Στέφανος';
-        return $name;
+        $db = mysqli_connect('localhost','root','1122','jobs');
+        mysqli_set_charset($db, "utf8");
+        $users_test_sql="SELECT fullname FROM users WHERE username = '".$user_check."'";
+        $result_test=mysqli_query($db, $users_test_sql);
+        $row_count = mysqli_fetch_array($result_test);
+        return $row_count['fullname'];
     }
     
     function check_for_delays($user_check,$delayed_task,$ids){
@@ -302,37 +270,36 @@
     }
     
     function check_if_null($date){
-         if ($date == null)
-               $finished='';
-         else
-               $finished=date('d/m/Y',strtotime($date)); 
-         return $finished;
+        if ($date == null)
+           $finished='';
+        else
+           $finished=date('d/m/Y',strtotime($date)); 
+        return $finished;
     }
     
     function check_id($id){
         if (($id-(int)$id)==0)
-                $final_id=number_format($id,0);
-            else
-                $final_id=$id;
-            
-            return $final_id;
+            $final_id=number_format($id,0);
+        else
+            $final_id=$id;   
+        return $final_id;
     }
     
     //Παιρνει εισοδο το καινουργιο comment kai to προσθετει στο παλιο χωριζοντας τα με κενο.
     function get_old_comment($con,$id,$comment){
-            $result3 = mysqli_query($con,"SELECT comments FROM tasks WHERE id=".$id);
-            $row2 = $result3->fetch_assoc();
-            $old_comments=$row2["comments"];      
-            $comment=$old_comments."  ".$comment;
-            return $comment;   
-        }
+        $result3 = mysqli_query($con,"SELECT comments FROM tasks WHERE id=".$id);
+        $row2 = $result3->fetch_assoc();
+        $old_comments=$row2["comments"];      
+        $comment=$old_comments."  ".$comment;
+        return $comment;   
+    }
     
     //Επιστρεφει τον συνολικο αριθμο απο tasks που υπαρχουν στην βαση
     function get_total_records($page_count){
-          $con = mysqli_connect('localhost','root','1122','jobs');
-          $result = mysqli_query($con,"SELECT count(Id) as sum FROM tasks");
-          $row=$result->fetch_assoc();
-          return round($row['sum']/$page_count);
+        $con = mysqli_connect('localhost','root','1122','jobs');
+        $result = mysqli_query($con,"SELECT count(Id) as sum FROM tasks");
+        $row=$result->fetch_assoc();
+        return round($row['sum']/$page_count);
     }
 ?>
 

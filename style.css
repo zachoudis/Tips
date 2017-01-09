@@ -5,6 +5,7 @@ html, body, form, fieldset, table, tr, td, img {
 }
 body{
     background-color: white; 
+   
 }
 .myPosition {
     position: relative;
@@ -12,14 +13,12 @@ body{
     left:200px;
 }
 .pages{
-   
     position: relative;
     left: 40%;
     top: -30px;
    
 }
-.pages_down{
-   
+.pages_down{   
     position: relative;
     left: 40%;
     top: 17px;
@@ -162,7 +161,7 @@ table.statusDiv {
    background-color: white; 
    
    border-radius: 8px;
-   border-bottom:  px solid gray;
+   border-bottom: solid gray;
    box-shadow: 0 0 12px #222;
      
    width:42%; 
@@ -391,9 +390,12 @@ background-color: #404040;
    height:40px;
    margin:10px;
 }
-.noblink{  padding: 0px 7px;
+.noblink{  
+     padding: 0px 7px;
      color: green;
-     font-size: 22px;}
+     font-size: 100%;
+     overflow:auto;
+     resize: none;}
 #blink{
     left:10px;
     
@@ -403,7 +405,7 @@ background-color: #404040;
      padding: 0px 7px;
      color: green;
      font-size: 100%;
-    overflow:auto;
+     
     -webkit-animation-name: blinker;
     -webkit-animation-duration: 2s;
     -webkit-animation-timing-function: linear;
@@ -423,13 +425,13 @@ background-color: #404040;
 .team1{
     position: absolute;
     top:20px;  
-     width:100%;
+    width:100%;
     
 }
 .team2{
     position: absolute;
     top: 65px;
-     width:100%;
+    width:100%;
 }
 @-moz-keyframes blinker {  
     0% { opacity: 1.0; }

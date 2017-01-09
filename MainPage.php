@@ -8,7 +8,8 @@
 <?php
   include('session.php');
   include('main.php');
-//dsdsdsd mpike kai allh allagh
+
+//dsdsdsd mpikre kai allh allagh
 ?>
 <html>
    <head> 
@@ -71,6 +72,7 @@
    
    <body onload="update_view('xxx',<?php echo $total_pages; ?>,'1','Id ASC')" >
         <?php
+       
             if ( $user_check!= "span" AND  $user_check!="kova"){
                 change_auto_filter($user_check); 
                 check_for_delays($user_check,$delayed_task,$ids);
@@ -178,7 +180,7 @@
           <?php } ?>
                
             <div class='alerts' >
-                <div class="team1"><span class="noblink" id="noblink">You Have No Delayed Tasks</span></div>
+                <div class="team1"><div class="noblink" id="noblink">You Have No Delayed Tasks</div></div>
                 <div class="team2"><span class="noblink" id="noblink2">You Have No Tasks Ending Today</span></div>    
                 <div class="team1"><span class="blink"   id="blink">You Have <?php echo $GLOBALS['delayed_task_count']?> Delayed Tasks</span></div>
                 <div class="team2"><span class="blink"   id="blink2" >You Have <?php echo $GLOBALS['task_ending_today_count']?> Tasks Ending Today</span></div>    
