@@ -1,0 +1,490 @@
+#myDialog { display: none; }
+#finished_tip{ display:none;}
+html, body, form, fieldset, table, tr, td, img {
+    font: 100%/150% arial;
+}
+body{
+    background-color: white; 
+}
+.myPosition {
+    position: relative;
+    top: 200px;
+    left:200px;
+}
+.pages{
+   
+    position: relative;
+    left: 40%;
+    top: -30px;
+   
+}
+.pages_down{
+   
+    position: relative;
+    left: 40%;
+    top: 17px;
+    padding-bottom: 50px;
+   
+}
+
+.pages_button {
+    padding-left:10px;
+    padding-right:10px;
+    cursor:pointer;
+    border-right:1px solid white;
+    background-color:#404040;
+    color:white;
+}
+.test_table{
+    position: relative;
+    
+}
+.pages_button_previous{ 
+    background-color:white; 
+    background-color:white;
+    color:blue;
+    cursor:pointer;
+    text-decoration:none;
+    border:none;
+    padding-left:0;
+    padding-right:0;
+    
+}
+.panel{
+   position: relative; 
+   width:98.9%;
+   height:100px;
+   top: 4px;
+   
+   border-radius: 8px;
+   border-bottom:  2px solid gray;
+ 
+   padding:10px;
+  
+   box-shadow: 0 0 12px #222;
+}    
+.logo{
+    position: absolute;
+}
+#dv{
+    position:absolute;
+    top:1000px;
+    
+    
+}
+#version{
+    position: absolute;
+    top:20px;
+    left:5px;
+}
+#description{  
+    width: 90%;
+    height: 80px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: none;
+}
+.container{
+    position: absolute;
+    width: 80%;
+    height: 50px;
+    left: 400px;
+    top: 30px;
+}
+
+.manager_filters{
+   background-color: white; 
+   border: 1px solid #222;
+   border-radius: 10px;
+   width:370px; 
+   height: 100px;
+   position: absolute;
+   right: 25%;
+   top: 170px;
+}
+
+.main{
+   position: absolute;
+   background-color: white;
+   padding-right: 3px;
+   border-radius: 10px;   
+   
+   top: 295px;
+}
+
+.form{
+    
+   border: 1px solid #222;
+   border-radius: 5px;
+   width:720px; 
+   margin: 10px;
+   padding: 10px;
+   height: 434px;
+}   
+.edit_form{
+   border: 1px solid #222;
+   border-radius: 5px;
+   width:720px; 
+   margin: 10px;
+   padding: 10px;
+   height: 450px;
+}   
+table.statusDiv {
+   display:inline-block;
+   width:100%;
+   border-collapse:separate;
+   border-spacing:10px 0px;
+}  
+.pages{
+	 font: 75% arial;
+}
+.alerts{
+   position: absolute;
+   background-color: white; 
+   
+   border-radius: 8px;
+   border-bottom: 2px solid gray;
+   box-shadow: 0 0 12px #222;
+   
+   width:15%; 
+   height: 51px;
+   top:170px;
+   
+   color:red;
+
+   padding-left:10px;
+   padding-top: 15px;
+   padding-bottom:  35px; 
+   right:0.4%;
+}
+.filters{
+   position: absolute;
+   background-color: white; 
+   
+   border-radius: 8px;
+   border-bottom:  px solid gray;
+   box-shadow: 0 0 12px #222;
+     
+   width:42%; 
+   height: 100px;
+   top: 170px;
+
+}    
+
+.submit_hours_panel{
+    
+    
+    
+}
+.task{
+    display: inline-block;
+   
+    position: absolute;
+    left:29%;
+     overflow: auto;
+}
+
+.user{
+    display: inline-block;
+    position: absolute;
+    right:380px;
+     overflow: auto;
+}
+.department{
+    display: inline-block;
+    position: absolute;
+    right:257px;
+     overflow: auto;
+}
+.deadlines_not{
+    display: inline-block;
+    position: absolute;
+    right:119px; 
+     overflow: auto;
+}
+.entolh_apo{
+    display: inline-block;
+     position: absolute;
+    right:10px;  
+     overflow: auto;
+}
+.delay_finished{
+    display: inline-block;
+    position: absolute;
+    right:20px;
+     overflow: auto;
+}
+.delay_pending{
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+     overflow: auto;
+}
+.check_box{
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top:40px;
+     overflow: auto;
+}
+.pages2{
+    padding-left: 4px;
+    padding-right: 3px;
+background-color: #404040;
+    text-decoration: none;
+    cursor: pointer;
+    border-right: 1px solid white;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+}
+.project{
+    display: inline-block;
+    position: absolute;
+    left: 135px;
+     overflow: auto;
+}
+.asterisk{
+    color:red;
+}
+.filters2{ 
+   border: 1px solid yellow;
+   border-radius: 10px;
+   width:370px; 
+   position: absolute;
+   top: 700px;
+}      
+.user_filter2{
+   border-radius:8px;
+   border: 1px solid gray;
+}
+ 
+.export{               
+  position: absolute;
+  right: -8px; 
+ top:-24px;
+}
+.insert{
+  position: absolute;
+  top:-18px;
+
+}   
+.welcome{
+   position: absolute;
+   width: 600px;
+   top :-10px;
+   left: 12px;
+  
+}
+.signout{  
+   position: absolute;
+   top :18%;
+   right: 0.1%;
+   width: 100px;
+   height: 30px;
+}
+.table{
+      box-shadow: 0 0 12px #222;
+        border-radius: 8px;
+   position: relative;
+   margin:0px;
+}
+
+.loader {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.rate_button{   
+    background-color: orange; /* Green */
+    border-radius: 8px;
+    color: black;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+.edit_button{
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 17px;
+}
+
+.drop_down_state{
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;  
+}
+
+.txtHint{ 
+     
+    margin-right: 5px;
+    position: relative;      
+}
+
+.lines{
+    border: 1px solid lightgray;
+
+}
+
+
+.table td:hover{
+    background-color: #f1f1ff;
+}
+.table tr:hover{
+    background-color: #f1f1ff;
+}
+
+.normal_line{
+    background-color:#a9d8ef;
+}
+.light_line{
+     background-color:#CDE8F6;
+    
+}
+
+.title{
+ 
+    background-color: #E1E2E1;
+     text-align: center;
+}
+.name{
+    position:absolute;
+    right: 42%;
+    top: 0px;
+}
+.links{
+   padding: 0px 10px;
+   color: red;
+   font-size: 25px;
+    position: relative;               
+   width:auto;
+   height:40px;
+   margin:10px;
+}
+.noblink{  padding: 0px 7px;
+     color: green;
+     font-size: 22px;}
+#blink{
+    left:10px;
+    
+}
+.blink {
+    
+     padding: 0px 7px;
+     color: green;
+     font-size: 100%;
+    overflow:auto;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.team1{
+    position: absolute;
+    top:20px;  
+     width:100%;
+    
+}
+.team2{
+    position: absolute;
+    top: 65px;
+     width:100%;
+}
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.export2{
+   margin: 10px;
+   position: absolute;
+   right: 5px;
+   top: -22px;
+}
+.inout{
+   background-color: white;
+   border: 1px solid blue;
+   border-radius: 8px;   
+   position: absolute;
+   top: 815px; 
+   width: 740px;
+}
+.drop{
+   margin: 10px;
+   border-radius:5px;
+   border: 1px solid gray;
+}
+
+.letter {
+    font-size: 10px;
+    float: left;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.crimson {
+    color : crimson;
+}
+.darkblue {
+    color: darkblue;
+}
+.arrow {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 10px;
+}
+.container2 {
+    width: 10px;
+    line-height: 9px;
+}
