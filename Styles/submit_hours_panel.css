@@ -1,0 +1,294 @@
+#submit_hours_panel{
+    background-color: lightgray;
+    overflow:hidden;
+}
+
+#pagies_jobs{
+    position:relative;
+    padding:1px;
+}
+
+.submit_hours {
+      background: #f4f4f4 url(../SimpleDropDownEffects/images/grid_DominikKiss_SubtlePatterns.jpg);
+    position: absolute;
+    border-bottom: solid gray;
+    box-shadow: 0 0 12px #222;
+    left: 50.75%;
+    width: 18.4%;
+    height: 100px;
+    top: 134px;
+}
+
+.hours_info {
+      background: #f4f4f4 url(../SimpleDropDownEffects/images/grid_DominikKiss_SubtlePatterns.jpg);
+    font-size: 14px;
+    position: absolute;
+    border-bottom: solid gray;
+    box-shadow: 0 0 12px #222;
+    width: 9.9%;
+    height: 100px;
+    right: 20.27%;
+    top: 134px;
+   
+    padding-left: 6px;
+}
+
+
+#info_panel{
+    background-color: white;
+    position: absolute;
+    width: 99.7%;
+    height:6%;
+    left:0%;
+    border: 1px solid #222;
+    border-radius: 5px;
+}
+
+#projects{
+    padding:1px;
+}
+#tips{
+    background-color: white;
+    position: absolute;
+    top:8%;
+    width:59.5%;
+    height:68%;
+    left:0%;
+    border: 1px solid #222;
+    overflow-y: scroll;
+}
+
+#pagies{
+    background-color: white;
+    position: absolute;
+    top:8%;
+    width:39.5%;
+    height:68%;
+    right:0%;
+    border: 1px solid #222;
+    overflow-y: scroll;
+}
+
+#messages{
+    background-color: white;
+    position: absolute;
+    top:77%; 
+    width: 99.7%;
+    height:15%;
+    left:0%; 
+    border: 1px solid #222;
+    border-radius: 5px;
+}
+.ui-dialog-title{
+    font-size: 110% !important;
+}
+
+.ui-widget-header{
+    border: 1px solid #000000 !important;
+}
+
+#submit_hours_buttons{
+    position: absolute;
+    top:94.5%;
+    width: 99.7%;
+    height:6%;
+    left:0%; 
+    border-radius: 5px;
+}
+
+.submit_hours_but{
+    border-radius: 5px;
+}
+
+#day{
+    position: absolute;
+    left:1%; 
+    top:17%;
+}
+
+#total_hours{
+    position: absolute;
+    left:40%;
+    top:17%;
+}
+
+#user_type{
+    position: absolute;
+    right:1%;
+    top:17%;
+}
+
+#time_registered{
+    position:absolute;
+    left:1%;
+    top:10%;
+}
+
+#time_remaining{
+    position: absolute;
+    left:1%;
+    top:60%;  
+}
+
+#alert_messages{
+    padding: 10px;
+    position: absolute;
+    left:47%;
+    top:0%;  
+    width:51%;
+    height: 81%;
+    border-radius: 1px;
+}
+.info_minutes{
+    border-radius: 5px;
+}
+#clear{
+    position: absolute;
+    left:15%; 
+}
+
+#stop_time_button{
+    position: absolute;
+    left: 32%;
+    top: 72%;
+    border-radius: 5px;
+    border-bottom: solid gray;
+    box-shadow: 0 0 4px #222;
+}
+#logon_message{
+    position:absolute;
+    left:17%;
+}
+#submit_hour{
+    position: absolute;
+    left:40%;
+}
+
+#close_hour{
+    position: absolute;
+    left:70%;
+}
+
+#title_hours{
+    position:absolute;
+    left:32%;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+#buttons_days_panel{
+    position: absolute;
+    width: 95%;
+    height:65%;
+    top:27%;
+    padding-left:12px;
+    overflow: auto;
+}
+
+.buttons_days{
+    background-color:  green;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 4px 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    margin-left: 8px;
+    
+     -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+@-webkit-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }}
+    
+.title_tips{
+    font-size: 20px;
+    background-color: #E1E2E1;
+    text-align: center;
+}
+.ui-dialog-titlebar  .ui-widget-header {
+  background: purple;
+}
+.quantity_minutes{
+     outline: none;
+}
+#textarea{
+    
+   width:  62px;
+   height: 45px;
+   resize: none;
+}
+
+#total_minutes{
+    position:absolute;
+    left:361px;
+    border-radius: 5px;
+}
+#minutes_left{
+    border-radius: 5px;
+}
+#fixed_jobs{
+    position:absolute;
+    top:210px;
+    height:500px;
+    overflow: scroll;
+}
+
+#fixed_jobs_table{
+    position:relative;
+    overflow: scroll;
+}
+
+#select_fixed{
+    position:absolute;
+    top:170px;
+}
+
+#export_panel_UsersInOut{
+    
+    color: #000099;
+    position: absolute;
+    top: 27px;
+    left: 325px;
+
+}
+
+#inouts_day{
+   
+    top: 9%;
+    position: absolute;
+
+}

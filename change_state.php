@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <?php
-    include 'main.php';
+    include('PHP/main_functions.php');
+    //Το αρχειο αυτο καλειτε οταν ο χρηστης αλλαξει κατασταση σε ενα TIP. πχ απο PENDING σε FINISHED. 
+    //Και αναλογα με το ποια κατασταση βρισκεται και ποια θελει να παει, τρεχει το καταλληλο query στο database 
+    
+    
     $state= $_GET['q'];
     $id =  $_GET['id'];
     $comment = $_GET['comment'];
     $grade = $_GET['grade'];
-    $submitDate=$_GET['submitDate'];
-
+    $timestamp = str_replace('/', '-', $_GET['submitDate']);
+    $submitDate = date('Y-m-d', strtotime($timestamp));
+    
     change_previous_tasks($id,$ids,$state);
 
     //If the state was PENDING and Changed to FINISHED OR CANCELLED
-    
+    $con = mysqli_connect('localhost','root','1122','jobs');
+    if (!$con) { die('Could not connect: ' . mysqli_error($con));}
         
-        //Database Connection
-        $con = mysqli_connect('localhost','root','1122','jobs');
-        if (!$con) { die('Could not connect: ' . mysqli_error($con));}
- 
-        
-     //   $curr_date=date("Y-m-d");
-        
-       
-         $curr_date= $submitDate;
+        $curr_date= $submitDate;
         //Gets the Deadline from the database
         $sql2="SELECT deadline FROM tasks WHERE id=".$id;
         $result2 = mysqli_query($con,$sql2);
@@ -28,6 +26,10 @@
         
         //Gets the already inserted comment  and add the new one       
         $comment=get_old_comment($con,$id,$comment);
+        
+        
+        
+        
         
         //If there is a deadline
         if ($row["deadline"]!=null){
@@ -73,10 +75,12 @@
                  $sql="UPDATE tasks SET date_finished= NULL, state='".$state."',comments='".$comment."' WHERE id =".$id;
             }
 
+       
+  
           if (!mysqli_query($con,$sql)) {
                  echo("Errormessage: %s\n".mysqli_error($con));
         }           
-        echo $sql;
+      //  echo $sql;
     
     
 ?>

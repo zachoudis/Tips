@@ -1,0 +1,179 @@
+.manager_filters{
+   background-color: white; 
+   border: 1px solid #222;
+   border-radius: 10px;
+   width:370px; 
+   height: 100px;
+   position: absolute;
+   right: 25%;
+   top: 170px;
+}
+
+.filters{
+   position: absolute;
+   background: #f4f4f4 url(grid_DominikKiss_SubtlePatterns.jpg);
+  
+   border-bottom: solid gray;
+   box-shadow: 0 0 12px #222;
+  
+   border-bottom-left-radius:  8px; 
+   width: 49.95%;
+   height: 100px;
+    top:134px;
+}    
+
+#user_filter2{
+   width :98%;
+   
+   
+}
+.filter_select{
+      border-radius: 4px;
+      
+}
+
+.last_filters{
+      width :100%;
+}
+
+.yolo{
+    overflow:hidden;
+    block:inline;
+    width :fit-content;
+    font-size:92%;  
+}
+
+.check_box{
+    width: 16%;  
+    position: absolute;
+     left: 1%;
+    top:53%; 
+}
+.project{
+   width: 10%;
+   position: absolute;
+   left:18%; 
+}
+
+#project_filter2{
+     width: 92%;
+   position: absolute;
+    
+}
+#deadline_filter2{
+       width: 133%;
+   position: absolute;
+}
+.task{
+   width: 9%;
+   position: absolute;
+   left:30%; 
+}
+
+.user{
+   width: 18%;
+   position: absolute;
+   left:42%;   
+}
+.department{
+    width: 10%;
+    position: absolute;
+    left:62%;
+}
+.deadlines_not{
+   width: 10%;
+   position: absolute;
+   left:74%;
+}
+.entolh_apo{
+   width: 10%;
+   position: absolute;
+   left:89%;  
+}
+.delay_finished{
+    width: 10%;
+    display: inline-block;
+    position: absolute;
+    right:20px;
+}
+.delay_pending{
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+}
+.alerts {
+    position: absolute;
+    background: #f4f4f4 url(grid_DominikKiss_SubtlePatterns.jpg);
+    border-bottom-right-radius: 8px;
+    border-bottom: 2px solid gray;
+    box-shadow: 0 0 12px #222;
+    width: 18.93%;
+    height: 50px;
+    top: 134px;
+    color: red;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    right: 0.44%;
+}
+
+.team1{
+    position: absolute;
+    top: 15px;
+    width:98%;
+}
+.team2{
+    position: absolute;
+    top: 65px;
+    width:98%;
+}
+
+.blink {
+     width: 98%;
+     padding: 0px 7px;
+     color: green;
+     font-size: 100%;
+     
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.noblink{  
+     padding: 0px 7px;
+     color: green;
+     font-size: 100%;
+     resize: none;
+}
+
+#blink{
+    left:10px;
+}
+
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}

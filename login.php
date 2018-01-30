@@ -31,8 +31,7 @@
 <html>
    
    <head>
-      <title>Login Page</title>
-      
+      <title>Login Page</title>   
       <style type = "text/css">
          body {
             font-family:Arial;
@@ -48,31 +47,28 @@
          .box {
             border:#666666 solid 1px;
          }
-      </style>
-      
+         #login_button{
+             border-radius: 10px;
+             position: relative;
+             width:120px;
+             font-size: 17px;
+         }
+      </style>     
    </head>
    
-   <body bgcolor = "#FFFFFF">
-	
-      <div align = "center">
-         <div style = "width:310px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-               <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
-
+   <body bgcolor = "#bfbfbf">	
+        <div align = "center" style= "top: 31%; position: absolute; left: 40%; ">
+             <div  align = "center" style = "width:310px; border: solid 1px #333333; background-color: #e6e6e6; border-radius: 6px;" align = "left">
+                <div align = "center" style = "background-color:#333333; color:#FFFFFF; padding:3px; "><b>Tips Login</b></div>			
+                <div align = "center" style = "margin:30px">
+                        <form action = "" method = "post">
+                            <label>UserName  </label><input style="border-radius: 3px;"type = "text" name = "username" class = "box"/><br /><br />
+                            <label>Password  </label><input style="left: 2px; position: relative; border-radius: 3px;" type = "password" name = "password" class = "box" /><br/><br />
+                            <input id='login_button' type = "submit" value = " Submit "/><br />
+                        </form>
+                   <div align = "center" style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+                </div>		
+            </div>			
+        </div>
    </body>
 </html>

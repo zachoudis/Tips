@@ -1,0 +1,77 @@
+.table{
+    box-shadow: 0 0 12px #222;
+    border-radius: 8px;
+    position: relative;
+    margin:0px;
+    width: 99.5%;
+}
+.pages{
+    position: relative;
+    left: 40%;
+    top: -9px;
+   
+}
+
+.pages2{
+    padding-left: 4px;
+    padding-right: 3px;
+    background-color: #404040;
+    text-decoration: none;
+    cursor: pointer;
+    border-right: 1px solid white;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+}
+.pages_down{   
+    position: relative;
+    left: 40%;
+    top: 17px;
+    padding-bottom: 50px;
+   
+}
+.pages_button {
+    padding-left:10px;
+    padding-right:10px;
+    cursor:pointer;
+    border-right:1px solid white;
+    background-color:#404040;
+    color:white;
+}
+.lines{
+    border: 1px solid lightgray;
+}
+.table td:hover{
+    background-color: #f1f1ff;
+}
+.table tr:hover{
+    background-color: #f1f1ff;
+}
+.normal_line{
+    background-color:#a9d8ef;
+}
+.light_line{
+     background-color:#CDE8F6;
+    
+}
+
+.drop_down_state{
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;  
+}
+.edit_button{
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 17px;
+}
+
+.title{
+ 
+    background-color: #E1E2E1;
+     text-align: center;
+}

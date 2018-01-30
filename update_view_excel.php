@@ -1,7 +1,7 @@
 <!DOCTYPE html>.
 
 <?php
-  include('main.php');
+  include('PHP/main_functions.php');
   include('session.php');
 ?>
 <html>
@@ -127,9 +127,9 @@
             echo "<td  class='lines'>" . $row['comments'] . "</td>";  
             //GRADE
             if ($row['G1'] == null) $g1=' ';else $g1=$row['G1'];
-            if ($row['G2'] == null) $g2=' ';else $g2=$row['G2'];
+          //  if ($row['G2'] == null) $g2=' ';else $g2=$row['G2'];
            
-            echo "<td  class='lines'>".$g1." -- ".$g2."</td>";  
+            echo "<td  class='lines'>".$g1." -- </td>";  
 
             echo "</tr>";
             }

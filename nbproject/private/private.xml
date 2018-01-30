@@ -3,16 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/Jobs/javascript.js</file>
-            <file>file:/C:/wamp64/www/Jobs/change_state.php</file>
-            <file>file:/C:/wamp64/www/Jobs/edit_form.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_hours/find_user_tips.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_hours/apply_time.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_in_out/submit_button_time_in.php</file>
             <file>file:/C:/wamp64/www/Jobs/MainPage.php</file>
-            <file>file:/C:/wamp64/www/Jobs/main.php</file>
-            <file>file:/C:/wamp64/www/Jobs/update_view.php</file>
-            <file>file:/C:/wamp64/www/Jobs/style.css</file>
-            <file>file:/C:/wamp64/www/Jobs/login.php</file>
-            <file>file:/C:/wamp64/www/Jobs/session.php</file>
-            <file>file:/C:/wamp64/www/Jobs/config.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_in_out/submit_in_out_functions.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_in_out/submit_minutes.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_hours/find_user_fixed_jobs.php</file>
+            <file>file:/C:/wamp64/www/Jobs/PHP/logon_logoff_event_functions.php</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_in_out/submit_in_out_functions.js</file>
+            <file>file:/C:/wamp64/www/Jobs/Javascript/submit_tips_functions.js</file>
+            <file>file:/C:/wamp64/www/Jobs/submit_hours/submit_hours_functions.js</file>
+            <file>file:/C:/wamp64/www/Jobs/PHP/main_functions.php</file>
         </group>
     </open-files>
 </project-private>

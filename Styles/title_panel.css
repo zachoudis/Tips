@@ -1,0 +1,44 @@
+.panel{
+   position: relative; 
+   width:98.9%;
+   height:100px;
+   top: 0px;
+   
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   border-bottom:  2px solid gray;
+   padding:10px;
+   box-shadow: 0 0 12px #222;
+}    
+.logo{
+    position: absolute;
+}
+
+.container{
+    position: absolute;
+    width: 80%;
+    height: 50px;
+    left: 400px;
+    top: 30px;
+}
+
+#version{
+    position: absolute;
+    top:20px;
+    left:5px;
+}
+
+.signout{  
+      background: #f4f4f4 url(../SimpleDropDownEffects/images/grid_DominikKiss_SubtlePatterns.jpg);
+    position: absolute;
+    top :18%;
+    right: 0.1%;
+    width: 100px;
+    height: 30px;
+}
+
+.name{
+    position:absolute;
+    right: 42%;
+    top: 0px;
+}
